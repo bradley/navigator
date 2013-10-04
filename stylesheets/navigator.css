@@ -1,0 +1,21 @@
+/* --------------------------------------------- */
+/* - Setup Navigation Controller Default Styles -*/
+/* --------------------------------------------- */
+
+.navigation-controller {
+    overflow-x: hidden;
+}
+
+.navigation-controller .navigation-wrap {
+    height: 100%;
+    -webkit-transition: margin-left 0.25s ease-in-out;
+    -moz-transition: margin-left 0.25s ease-in-out;
+    -o-transition: margin-left 0.25s ease-in-out;
+    transition: margin-left 0.25s ease-in-out;
+}
+
+.navigation-controller .navigation-wrap .navigation-view {
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+}

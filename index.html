@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Navigator demo</title>
+        
+        <link href="stylesheets/navigator.css" media="all" rel="stylesheet" type="text/css"/>
+        
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/navigator.js"></script>
+        
+        <style type="text/css">
+            
+            body {
+                margin: 25px;
+                font-family: 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+            }
+            
+            /* ---------------------------------------- */
+            /* ------ Custom styles for Navigator ----- */
+            /* ---------------------------------------- */
+            
+            #my-nav-controller {
+                width: 500px;
+                height: 700px;
+                background: #F3EFF0;
+            }
+            
+            #my-nav-controller .my-content {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            
+        </style>
+        
+        <script type="text/javascript">
+            $(window).load(function(){
+            
+                $('a#backward').click(function(e){
+                    e.preventDefault();
+                    $('.navigation-controller').stepBackward();
+                });
+
+                $('a#forward').click(function(e){
+                    e.preventDefault();
+                    $('.navigation-controller').stepForward();
+                });
+            
+            });
+        </script>
+    </head>
+    <body>
+        <a href='#' id='backward'>backward</a>&nbsp;<a href='#' id='forward'>forward</a>
+        <div id='my-nav-controller' class='navigation-controller'>
+            <div class='navigation-view'>
+                <p class='my-content'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ullamcorper, lectus eget aliquam tincidunt, ligula lorem luctus diam, ac imperdiet leo sapien ac dui.
+                </p>
+            </div>
+            <div class='navigation-view'>
+                <p class='my-content'>
+                Donec dignissim quis magna ac accumsan. Aenean ultrices eros a nisi mollis tincidunt. Donec sem nisl, elementum sit amet pharetra a, ultrices ac tellus. Curabitur laoreet felis at velit tristique consectetur quis at ante. Nunc vel odio in augue hendrerit commodo.
+                </p>
+            </div>
+            <div class='navigation-view'>
+                <p class='my-content'>
+                In blandit ultrices elementum. Quisque consequat facilisis felis at fringilla. Fusce vitae lacus vulputate, tempus diam quis, fringilla neque.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
